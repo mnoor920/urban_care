@@ -2111,22 +2111,39 @@ a.team-active i {
 <!-- ============================================================== -->
 <!-- Start slider Area Css -->
 <!-- ============================================================== -->*/
-.slider1.slider-area {
+/* .slider1.slider-area {
   height: 750px;
+
   background: url(assets/images/slider/slider1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
+} */
+.slider1.slider-area {
+  /* Set the background image */
+  background-image:
+    linear-gradient(to right, rgba(10, 30, 60, 0.9), rgba(10, 30, 60, 0.5)),
+    url(assets/images/hero_one.jpeg);
+  /* Replace with the correct path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 750px;
+  color: #fff;
 }
 
+
 .slider2.slider-area {
-  height: 750px;
-  background: url(assets/images/slider/slider.jpg);
+  background-image:
+    linear-gradient(to right, rgba(10, 30, 60, 0.9), rgba(10, 30, 60, 0.5)),
+    url(assets/images/driver.jpeg);
+  /* Replace with the correct path */
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: scroll;
-  background-position: center center;
+  height: 750px;
+  color: #fff;
 }
 
 .slider3.slider-area {
@@ -2838,7 +2855,7 @@ a.slider-button2:hover:after {
   width: 100%;
   bottom: 0;
   left: 0;
-  background: url(assets/images/resource/fc.jpg);
+  background: #F6C042;
   transform: scale(0.5, 1);
   background-size: cover;
   background-position: center;
@@ -3141,6 +3158,13 @@ a.slider-button2:hover:after {
 
 .dreamit-service-title1 p {
   color: #fff;
+  transition: 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*style three*/
@@ -3418,6 +3442,12 @@ a.slider-button2:hover:after {
 
 .dreamit-service-title p {
   transition: 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .style-seven .dreamit-single-service-box4:hover .single-service-icon4 i,
@@ -5601,7 +5631,8 @@ p.text-st {
 <!-- ============================================================== -->*/
 .breatcumb-area {
   padding: 215px 0 143px;
-  background: #f1f6fc url(assets/images/resource/case.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/images/cleaning_bg.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -6660,4 +6691,52 @@ div#particles {
 div#particles .slider1.index2-slider-area {
   height: 750px;
   background: inherit;
+}
+
+.contact-card {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  /* Adjust width as needed */
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.contact-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-card .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: unset;
+  justify-content: center;
+  align-items: end;
+  background: rgb(30, 192, 243);
+  background: linear-gradient(0deg, rgba(30, 192, 243, 0.958420868347339) 35%, rgba(30, 192, 243, 0.12648809523809523) 68%);
+}
+
+.contact-text {
+  padding: 10px;
+}
+
+.contact-text h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.contact-text p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0;
 }
