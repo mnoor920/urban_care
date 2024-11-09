@@ -3045,7 +3045,7 @@ a.slider-button2:hover:after {
 --< dreamit service area Css -->
 ======================================================*/
 .service-area {
-  background: url(assets/images/resource/service.jpg);
+  background: url(assets/images/service_img.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -5704,6 +5704,22 @@ p.text-st {
   font-weight: 500;
 }
 
+.from-box select {
+  height: 54px;
+  background-color: #fff;
+  border-color: transparent;
+  transition: 0.5s;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0px 1px 1px #e9eef7;
+  padding: 6px 20px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  color: #223645;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
 .from-box textarea {
   height: 150px;
   background-color: #fff;
@@ -6064,7 +6080,7 @@ form#contact_form {
 --<	dreamit Footer Middle Area Css -->
 ======================================================*/
 .footer-middle {
-  background: #63cbeb;
+  background: #0B2653;
   padding: 82px 0 33px;
 }
 
@@ -6739,4 +6755,16 @@ div#particles .slider1.index2-slider-area {
   font-size: 24px;
   font-weight: bold;
   margin: 5px 0 0;
+}
+
+.contact_breadcrum {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/images/contact_change.jpeg') !important;
+}
+
+.quote_breadcrum {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/images/quote_img.jpeg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
