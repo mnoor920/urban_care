@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     'use strict';
     // Mobile Menu
     $('.mobile-menu nav').meanmenu({
@@ -6,13 +6,13 @@
         meanMenuContainer: ".mobile-menu",
         onePage: false,
     });
-    
+
     //Header Search
-    if($('.search-box-outer').length) {
-        $('.search-box-outer').on('click', function() {
+    if ($('.search-box-outer').length) {
+        $('.search-box-outer').on('click', function () {
             $('body').addClass('search-active');
         });
-        $('.close-search').on('click', function() {
+        $('.close-search').on('click', function () {
             $('body').removeClass('search-active');
         });
     }
@@ -28,12 +28,12 @@
             sticky.addClass('sticky');
         }
     });
-  
-   // Slider Active
+
+    // Slider Active
     $('.slider_list').owlCarousel({
         loop: true,
-        autoplay: false,
-        autoplayTimeout: 10000,
+        autoplay: true,
+        autoplayTimeout: 4000,
         dots: false,
         nav: true,
         navText: ["<i class='fas fa-chevron-left''></i>", "<i class='fas fa-chevron-right''></i>"],
@@ -54,7 +54,7 @@
                 items: 1
             }
         }
-    })  
+    })
 
 
     // index-2
@@ -82,9 +82,9 @@
                 items: 1
             }
         }
-    }) 
-     	
-	 // Slider Active
+    })
+
+    // Slider Active
     $('.testimonial_list').owlCarousel({
         loop: true,
         autoplay: true,
@@ -135,7 +135,7 @@
                 items: 1
             }
         }
-    }) 
+    })
 
 
     $('.imdex-2-testi-slider').owlCarousel({
@@ -162,9 +162,9 @@
                 items: 1
             }
         }
-    }) 	
+    })
 
-	 // Case Study Active
+    // Case Study Active
     $('.case-study').owlCarousel({
         loop: true,
         autoplay: true,
@@ -186,16 +186,16 @@
             1000: {
                 items: 2
             },
-			1400: {
+            1400: {
                 items: 2
             },
             1920: {
                 items: 3
             }
         }
-    })	
-	
- // Testimonial Active
+    })
+
+    // Testimonial Active
     $('.blog_list').owlCarousel({
         loop: true,
         autoplay: true,
@@ -220,9 +220,9 @@
                 items: 3
             }
         }
-    })	
-	
- // Brand Active
+    })
+
+    // Brand Active
     $('.brand_list').owlCarousel({
         loop: true,
         autoplay: true,
@@ -249,7 +249,7 @@
         }
     })
 
-     // index-2 blog
+    // index-2 blog
     $('.index2-blog-slider').owlCarousel({
         loop: true,
         autoplay: true,
@@ -277,14 +277,14 @@
         }
     })
 
-    
+
 
 
     /*---------------------
     WOW active js 
     --------------------- */
     new WOW().init();
-    
+
     /*---------------------
     Nivo Slider active js 
     --------------------- */
@@ -306,38 +306,38 @@
 
     / Loder  /
     $(function () {
-      $('body').addClass('loaded');
+        $('body').addClass('loaded');
     });
-    
+
 
 
     // index-2 counterUp
     // Counter Up =========
-    jQuery(document).ready(function( $ ) {
+    jQuery(document).ready(function ($) {
 
         $('.counter2').counterUp({
-                time: 1500
+            time: 1500
         });
 
     });
 
     // scroll go top button
     $(window).on('scroll', function () {
-            var scrolled = $(window).scrollTop();
-            if (scrolled > 300) $('.go-top').addClass('active');
-            if (scrolled < 300) $('.go-top').removeClass('active');
-        });
+        var scrolled = $(window).scrollTop();
+        if (scrolled > 300) $('.go-top').addClass('active');
+        if (scrolled < 300) $('.go-top').removeClass('active');
+    });
 
-        $('.go-top').on('click', function () {
-            $("html, body").animate({
-                scrollTop: "0"
-            }, 1200);
-        });
+    $('.go-top').on('click', function () {
+        $("html, body").animate({
+            scrollTop: "0"
+        }, 1200);
+    });
 
-    
-    
-    
- // Venubox
+
+
+
+    // Venubox
 
     $('.venobox').venobox({
 
@@ -347,7 +347,7 @@
 
     });
 
-	/*--------------------------
+    /*--------------------------
      scrollUp
     ---------------------------- */
     $.scrollUp({
@@ -358,58 +358,58 @@
     })
 
     // Calender Jquery
-var curDate = (new Date()).getDate();
-var curMonth = (new Date()).getMonth();
-var curYear = (new Date()).getFullYear();
-var startDay = (new Date(curYear, curMonth, 1)).getDay();
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var noofdays = ["31", "29", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"];
-var prevMonth = noofdays[curMonth - 1];
-if (curMonth == 11) {
-prevMonth = noofdays[0]
-} else if (curMonth == 0) {
-prevMonth = noofdays[11]
-};
-var totalDays = noofdays[curMonth];
-var counter = 0;
-var precounter = prevMonth - (startDay - 1);
-var rightbox = 6;
-var flag = true;
+    var curDate = (new Date()).getDate();
+    var curMonth = (new Date()).getMonth();
+    var curYear = (new Date()).getFullYear();
+    var startDay = (new Date(curYear, curMonth, 1)).getDay();
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var noofdays = ["31", "29", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"];
+    var prevMonth = noofdays[curMonth - 1];
+    if (curMonth == 11) {
+        prevMonth = noofdays[0]
+    } else if (curMonth == 0) {
+        prevMonth = noofdays[11]
+    };
+    var totalDays = noofdays[curMonth];
+    var counter = 0;
+    var precounter = prevMonth - (startDay - 1);
+    var rightbox = 6;
+    var flag = true;
 
-jQuery('.curr-month b').text(months[curMonth]);
-for (var i = 0; i < 42; i++) {
-if (i >= startDay) {
-counter++;
-if (counter > totalDays) {
-counter = 1;
-flag = false;
-}
-if (flag == true) {
-jQuery('.all-date ul').append('<li class="monthdate">' + counter + '</li>');
-} else {
-jQuery('.all-date ul').append('<li style="opacity:.8">' + counter + '</li>');
-}
-} else {
-jQuery('.all-date ul').append('<li style="opacity:.8">' + precounter + '</li>');
-precounter++;
-}
+    jQuery('.curr-month b').text(months[curMonth]);
+    for (var i = 0; i < 42; i++) {
+        if (i >= startDay) {
+            counter++;
+            if (counter > totalDays) {
+                counter = 1;
+                flag = false;
+            }
+            if (flag == true) {
+                jQuery('.all-date ul').append('<li class="monthdate">' + counter + '</li>');
+            } else {
+                jQuery('.all-date ul').append('<li style="opacity:.8">' + counter + '</li>');
+            }
+        } else {
+            jQuery('.all-date ul').append('<li style="opacity:.8">' + precounter + '</li>');
+            precounter++;
+        }
 
-if (i == rightbox) {
-jQuery(jQuery('.all-date ul li')[rightbox]).addClass("b-right");
-rightbox = rightbox + 7;
-}
+        if (i == rightbox) {
+            jQuery(jQuery('.all-date ul li')[rightbox]).addClass("b-right");
+            rightbox = rightbox + 7;
+        }
 
-if (i > 34) {
-jQuery(jQuery('.all-date ul li')[i]).addClass("b-bottom");
-}
+        if (i > 34) {
+            jQuery(jQuery('.all-date ul li')[i]).addClass("b-bottom");
+        }
 
-if ((jQuery(jQuery('.all-date ul li')[i]).text() == curDate) && (jQuery(jQuery('.all-date ul li')[i]).css('opacity') == 1)) {
-jQuery(jQuery('.all-date ul li')[i]).css({
-"background-color": "#02548b",
-"color": "#fff"
-});
-}
-};
+        if ((jQuery(jQuery('.all-date ul li')[i]).text() == curDate) && (jQuery(jQuery('.all-date ul li')[i]).css('opacity') == 1)) {
+            jQuery(jQuery('.all-date ul li')[i]).css({
+                "background-color": "#02548b",
+                "color": "#fff"
+            });
+        }
+    };
 
 
 })(jQuery);
@@ -417,45 +417,45 @@ jQuery(jQuery('.all-date ul li')[i]).css({
 
 
 
- /* Portfolio Isotope  */
-    $('.image_load').imagesLoaded(function() {
+/* Portfolio Isotope  */
+$('.image_load').imagesLoaded(function () {
 
-        if ($.fn.isotope) {
+    if ($.fn.isotope) {
 
-            var $portfolio = $('.image_load');
+        var $portfolio = $('.image_load');
+
+        $portfolio.isotope({
+
+            itemSelector: '.grid-item',
+
+            filter: '*',
+
+            resizesContainer: true,
+
+            layoutMode: 'masonry',
+
+            transitionDuration: '0.8s'
+
+        });
+        $('.menu-filtering li').on('click', function () {
+
+            $('.menu-filtering li').removeClass('current_menu_item');
+
+            $(this).addClass('current_menu_item');
+
+            var selector = $(this).attr('data-filter');
 
             $portfolio.isotope({
 
-                itemSelector: '.grid-item',
-
-                filter: '*',
-
-                resizesContainer: true,
-
-                layoutMode: 'masonry',
-
-                transitionDuration: '0.8s'
-
-            });
-            $('.menu-filtering li').on('click', function() {
-
-                $('.menu-filtering li').removeClass('current_menu_item');
-
-                $(this).addClass('current_menu_item');
-
-                var selector = $(this).attr('data-filter');
-
-                $portfolio.isotope({
-
-                    filter: selector,
-
-                });
+                filter: selector,
 
             });
 
-        };
+        });
 
-    });
+    };
+
+});
 
 
 
@@ -463,44 +463,44 @@ jQuery(jQuery('.all-date ul li')[i]).css({
 
 // accordion=============
 
-    const labels = document.querySelectorAll(".accordion-item__label");
+const labels = document.querySelectorAll(".accordion-item__label");
 const tabs = document.querySelectorAll(".accordion-tab");
 
 function toggleShow() {
-  const target = this;
-  const item = target.classList.contains("accordion-tab")
-    ? target
-    : target.parentElement;
-  const group = item.dataset.actabGroup;
-  const id = item.dataset.actabId;
+    const target = this;
+    const item = target.classList.contains("accordion-tab")
+        ? target
+        : target.parentElement;
+    const group = item.dataset.actabGroup;
+    const id = item.dataset.actabId;
 
-  tabs.forEach(function(tab) {
-    if (tab.dataset.actabGroup === group) {
-      if (tab.dataset.actabId === id) {
-        tab.classList.add("accordion-active");
-      } else {
-        tab.classList.remove("accordion-active");
-      }
-    }
-  });
+    tabs.forEach(function (tab) {
+        if (tab.dataset.actabGroup === group) {
+            if (tab.dataset.actabId === id) {
+                tab.classList.add("accordion-active");
+            } else {
+                tab.classList.remove("accordion-active");
+            }
+        }
+    });
 
-  labels.forEach(function(label) {
-    const tabItem = label.parentElement;
+    labels.forEach(function (label) {
+        const tabItem = label.parentElement;
 
-    if (tabItem.dataset.actabGroup === group) {
-      if (tabItem.dataset.actabId === id) {
-        tabItem.classList.add("accordion-active");
-      } else {
-        tabItem.classList.remove("accordion-active");
-      }
-    }
-  });
+        if (tabItem.dataset.actabGroup === group) {
+            if (tabItem.dataset.actabId === id) {
+                tabItem.classList.add("accordion-active");
+            } else {
+                tabItem.classList.remove("accordion-active");
+            }
+        }
+    });
 }
 
-labels.forEach(function(label) {
-  label.addEventListener("click", toggleShow);
+labels.forEach(function (label) {
+    label.addEventListener("click", toggleShow);
 });
 
-tabs.forEach(function(tab) {
-  tab.addEventListener("click", toggleShow);
+tabs.forEach(function (tab) {
+    tab.addEventListener("click", toggleShow);
 });
